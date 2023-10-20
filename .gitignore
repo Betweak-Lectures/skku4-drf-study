@@ -1,0 +1,4 @@
+drf_study/settings/prod.py
+**/__pycache__/**
+
+*.sqlite3
