@@ -19,3 +19,7 @@ class Score(models.Model):
     
     exam_date = models.DateTimeField(null=True)
     
+    @property
+    def total(self):
+        return self.english + self.math + self.science
+    
