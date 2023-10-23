@@ -284,10 +284,7 @@ class ScoreViewSet(viewsets.ModelViewSet):
     def top(self, request):
         # score 서비스에 /top 을 넣으면 모든점수의 합이
         # 270점이 넘는사람만 조회해주세요
-
-        from django.db.models import F
-        from django.db.models.lookups import GreaterThan
-
+        
         qs = self.get_queryset().filter(
             GreaterThan(F("math")+F("science")+F("english"), 270)
         )
